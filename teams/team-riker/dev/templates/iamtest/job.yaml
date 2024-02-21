@@ -11,7 +11,7 @@ spec:
         app: awscli
     spec:
       restartPolicy: Never
-      # serviceAccountName: team-riker
+      serviceAccountName: team-riker
       containers:
         - name: awscli
           image: public.ecr.aws/aws-cli/aws-cli
