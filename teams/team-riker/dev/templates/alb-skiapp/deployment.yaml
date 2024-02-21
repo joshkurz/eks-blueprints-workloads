@@ -13,6 +13,7 @@ spec:
       labels:
         app: skiapp
     spec:
+      serviceAccountName: team-riker
       containers:
         - name: skiapp
           image: sharepointoscar/skiapp:v1
