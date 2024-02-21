@@ -14,7 +14,7 @@ spec:
       serviceAccountName: team-riker
       containers:
         - name: awscli
-          image: woahbase/alpine-awscli
+          image: public.ecr.aws/aws-cli/aws-cli
           command: ["aws", "s3", "ls"]
           resources:
             requests:
