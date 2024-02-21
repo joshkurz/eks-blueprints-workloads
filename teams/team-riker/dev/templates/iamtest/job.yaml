@@ -15,7 +15,7 @@ spec:
       containers:
         - name: awscli
           image: woahbase/alpine-awscli
-          command: ["awscli", "s3", "ls"]
+          command: ["aws", "s3", "ls"]
           resources:
             requests:
               memory: '64Mi'
