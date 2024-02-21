@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: awscli-job
+  name: awscli-job-1
   namespace: team-riker
 spec:
   replicas: 1
