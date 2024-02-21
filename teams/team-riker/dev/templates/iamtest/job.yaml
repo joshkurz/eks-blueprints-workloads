@@ -11,6 +11,7 @@ spec:
         app: awscli
     spec:
       serviceAccountName: team-riker
+      restartPolicy: Never
       containers:
         - name: awscli
           image: woahbase/alpine-awscli
@@ -30,14 +31,7 @@ spec:
         - key: 'karpenter'
           operator: 'Exists'
           effect: 'NoSchedule'
-      {{ end }}
-      topologySpreadConstraints:
-        - maxSkew: 1
-          topologyKey: topology.kubernetes.io/zone
-          whenUnsatisfiable: DoNotSchedule
-          labelSelector:
-            matchLabels:
-              app: awsclijobs          
+      {{ end }}         
       tolerations:
         - key: 'karpenter'
           operator: 'Exists'
