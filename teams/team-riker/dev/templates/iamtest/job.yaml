@@ -5,13 +5,13 @@ metadata:
   namespace: team-riker
 spec:
   replicas: 1
+  restartPolicy: Never
   template:
     metadata:
       labels:
         app: awscli
     spec:
       serviceAccountName: team-riker
-      restartPolicy: Never
       containers:
         - name: awscli
           image: woahbase/alpine-awscli
